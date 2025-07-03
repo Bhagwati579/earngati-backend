@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EarnGati™ Outreach</title>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    function sendEmail(e) {
+      e.preventDefault();
+      emailjs.sendForm('service_4kqvii6', 'template_1uyd1hd', e.target, 'KNQXj_IXNMh04qtyd')
+        .then(() => {
+          alert("📧 Email sent successfully!");
+        }, (error) => {
+          alert("❌ Failed to send email: " + error.text);
+        });
+    }
+    emailjs.init('KNQXj_IXNMh04qtyd');
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    form {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+    }
+    button {
+      background-color: #ff4b2b;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>📨 EarnGati™ Auto Outreach Form</h1>
+  <p>Reach out to companies for paid task partnerships automatically.</p>
+  <form onsubmit="sendEmail(event)">
+    <input type="text" name="user_name" placeholder="Your Name" value="Bhagawati Lal Pushkarna" required />
+    <input type="email" name="user_email" placeholder="Your Email" value="bhagwatilalpushkarna123@gmail.com" required />
+    <input type="text" name="to_company" placeholder="Company Name" value="Nykaa" required />
+    <textarea name="message" rows="5">Namaste Nykaa Team,
+
+Main EarnGati™ project ka founder hoon. Hamara platform verified users ko 5-minute ke real paid tasks complete karwata hai. Aapke product ya service ko genuine user ke feedback ke liye use kar sakte hain.
+
+Kya aap product testing ke liye EarnGati™ ke sath collaborate karna chahenge?
+
+Dhanyawaad 🙏  
+Bhagawati Lal Pushkarna  
+UPI: bhagwatilalpushkarna123-1@oksbi</textarea>
+    <button type="submit">📧 Send Outreach Email</button>
+  </form>
+  <footer style="margin-top: 30px; font-size: 14px;">
+    <p>Founder: Bhagawati Lal Pushkarna | UPI: bhagwatilalpushkarna123-1@oksbi</p>
+  </footer>
+</body>
+</html>
